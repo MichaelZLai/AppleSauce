@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    let APIURL = "https://applesaucenode.azurewebsites.net"
     var likelyFoods = [String]()
     var caption = ""
     var calories = [Int]()
