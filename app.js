@@ -1,9 +1,9 @@
 'use strict';
 
+const request = require('request');
 var express = require('express');
 var app = express();
 
-const request = require('request');
 
 // Replace <Subscription Key> with your valid subscription key.
 const subscriptionKey = 'dc565dfb55344704879376ec526d78a3';
@@ -67,7 +67,7 @@ app.post('/upload', function (req, res) {
             if (err) {
                  console.error(err);
             } else {
-                   console.log("success!")
+                   console.log("success!");
             }
         });
     });
