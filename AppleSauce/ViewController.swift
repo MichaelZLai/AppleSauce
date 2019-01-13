@@ -34,9 +34,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.image = image
             image1 = image
             let imageData = imageView.image?.jpegData(compressionQuality: 1)
-            if(imageData != nil){
-                print("hey")
-            }
+            //-------------------------------------------------------------------
+            let imageStr = imageData?.base64EncodedData()
             likelyFoods.append("hello")
             calories.append(1)
             caption = "aasdf"

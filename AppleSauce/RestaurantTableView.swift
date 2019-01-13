@@ -8,29 +8,29 @@
 
 import UIKit
 
-class RestaurantTableView: UITableView {
+class RestaurantTableView: UITableView , UITableViewDataSource{
     
-  
     
     var likelyFoods = [String]()
     var caption = ""
     var calories = [Int]()
     
     
-    
-    override var numberOfSections: Int{
-        return 1
-    }
-    
-    override func numberOfRows(inSection: Int) -> Int{
-        return 3
-    }
-    
-    override func cellForRow(at indexPath: IndexPath) -> UITableViewCell? {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! RestaurantTableViewCell
         cell.foodName.text = "hello"
         return cell
     }
+    
+    
+   
+    
+   
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
     
     
     
