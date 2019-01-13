@@ -46,7 +46,7 @@ request.post(options, (error, response, body) => {
 
 
 app.get('/', function (req, res) {
-  res.json(jsonResponse);
+  res.send('hello world');
 });
 
 app.post('/upload', function (req, res) {
