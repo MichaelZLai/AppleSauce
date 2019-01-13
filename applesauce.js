@@ -12,7 +12,7 @@ const subscriptionKey = 'dc565dfb55344704879376ec526d78a3';
 // subscription keys. For example, if you got your subscription keys from
 // westus, replace "westcentralus" in the URL below with "westus".
 const uriBase =
-    'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
+    'https://westus.api.cognitive.microsoft.com/vision/v2.0/analyze';
 
 const imageUrl =
     'http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg';
@@ -46,5 +46,5 @@ request.post(options, (error, response, body) => {
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send(jsonResponse);
 });
